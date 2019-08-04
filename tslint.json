@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-prettier"
+  ],
+  "rulesDirectory": [
+    "src/"
+  ],
+  "rules": {
+    "no-console": {
+      "severity": "none",
+      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+    },
+    "semicolon": [true, "always"],
+    "quotemark": [true, "single", "avoid-escape", "avoid-template"]
+  },
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**/*.ts",
+      "package.json"
+    ]
+  }
+}
