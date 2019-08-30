@@ -4,7 +4,7 @@
   "scripts": {
     "dev:tsc": "tsc -w",
     "dev:run": "nodemon inspect --watch dist dist/app.js",
-    "dev": "concurrently 'yarn dev:tsc' 'yarn dev:run'",
+    "dev": "concurrently 'yarn:dev:*'",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "build": "tsc"
   },
