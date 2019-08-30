@@ -2,10 +2,10 @@
   "name": "ts-demo",
   "version": "1.0.0",
   "scripts": {
-    "watch-ts": "tsc -w",
-    "dev-run": "nodemon --inspect dist/app.js",
+    "dev:tsc": "tsc -w",
+    "dev:run": "nodemon inspect --watch dist dist/app.js",
+    "dev": "concurrently 'yarn dev:tsc' 'yarn dev:run'",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "dev": "concurrently 'yarn watch-ts' 'yarn dev-run'",
     "build": "tsc"
   },
   "dependencies": {},
