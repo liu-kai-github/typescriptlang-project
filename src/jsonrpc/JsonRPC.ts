@@ -19,14 +19,14 @@ class JsonRPC implements IJsonRPC {
 
     public async getResponseBody(): Promise<IJsonRPCResponse> {
         // console.log(this.ctx, 'ctx');
-        const {method, params} = this.requestBody;
+        const {method, params, id} = this.requestBody;
         const dispatcher: Dispatcher = new Dispatcher(method, params);
         const [errorCode, result]: [string, string] = await dispatcher.getResult();
         return {
             jsonrpc: '2.0',
             error: errorCode ? responseError[errorCode] : undefined,
             result: result ? result : undefined,
-            id: '1234'
+            id,
         };
     }
 }
