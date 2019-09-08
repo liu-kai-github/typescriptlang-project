@@ -5,11 +5,11 @@ import Dispatcher from '../methods';
 import {IJsonRPCRequest, IJsonRPCResponse} from './IJsonRPC';
 import responseError from './responseError';
 
-interface IJsonRPC {
-    getResponseBody: () => object;
-}
+// interface IJsonRPC {
+//     getResponseBody: () => object;
+// }
 
-class JsonRPC implements IJsonRPC {
+class JsonRPC {
 
     private requestBody: any;
 
