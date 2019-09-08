@@ -9,10 +9,27 @@
   "rules": {
     "no-console": {
       "severity": "none",
-      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+      "options": [
+        "debug",
+        "info",
+        "log",
+        "time",
+        "timeEnd",
+        "trace"
+      ]
     },
-    "semicolon": [true, "always"],
-    "quotemark": [true, "single", "avoid-escape", "avoid-template"]
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape",
+      "avoid-template"
+    ],
+    "object-literal-sort-keys": false,
+    "ordered-imports": false
   },
   "linterOptions": {
     "exclude": [
