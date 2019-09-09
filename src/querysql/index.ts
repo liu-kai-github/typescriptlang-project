@@ -1,4 +1,4 @@
-import {createConnection, MysqlError} from 'mysql';
+import {createConnection} from 'mysql';
 
 const connection = createConnection({
     host: '172.81.210.92',
