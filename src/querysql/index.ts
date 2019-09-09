@@ -10,7 +10,7 @@ const connection = createConnection({
 /**
  *
  */
-function querysql(options: string, values: string[]): Promise<{ results: object | object[], fields: any }> {
+function querysql(options: string, values: string[]): Promise<{ results: object | object[], fields: object | undefined }> {
 
     return new Promise((resolve, reject) => {
         connection.connect();
