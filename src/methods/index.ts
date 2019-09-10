@@ -2,9 +2,11 @@
 
 ************************************************************************* */
 import Calculator from './Calculator';
+import User from './User';
 
 const methods: any = {
     calculator: new Calculator(),
+    user: new User(),
 };
 
 class Dispatcher {
