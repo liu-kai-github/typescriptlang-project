@@ -26,8 +26,8 @@ const responseError: any = {
     },
     '-32603': {
         code: -32603,
-        message: 'Internal JSON-RPC error.',
-        data: 'Invalid method parameter(s).'
+        message: 'Internal error',
+        data: 'Internal JSON-RPC error.'
     },
 };
 

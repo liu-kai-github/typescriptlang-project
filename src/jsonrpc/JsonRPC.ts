@@ -21,7 +21,7 @@ class JsonRPC {
         // console.log(this.ctx, 'ctx');
         const {method, params, id} = this.requestBody;
         const dispatcher: Dispatcher = new Dispatcher(method, params);
-        const [errorCode, result]: [string, string] = await dispatcher.getResult();
+        const [errorCode, result]: [number | null, any?] = await dispatcher.getResult();
         return {
             jsonrpc: '2.0',
             error: errorCode ? responseError[errorCode] : undefined,

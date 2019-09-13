@@ -15,7 +15,7 @@ const pool = mysql.createPool(config);
  * @param values 参数字符串数据
  * @return 查询结果的 Promise
  */
-function querysql(options: string, values: string[]): Promise<{ results: object | object[], fields: object | undefined }> {
+function querysql(options: string, values: Array<string | number>): Promise<{ results: any | any[], fields: object | undefined }> {
 
     return new Promise((resolve, reject) => {
         // connection.connect();

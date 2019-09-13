@@ -5,7 +5,7 @@ interface IParams {
 }
 
 interface IReturn {
-    add: boolean;
+    add: string;
 }
 
 interface IUser {
@@ -15,7 +15,7 @@ interface IUser {
 class User implements IUser {
     public async add({name}: IParams['add']): Promise<IReturn['add']> {
         await querysql('INSERT INTO user (name) VALUES (?)', [name]);
-        return true;
+        return 'Hello ' + name;
 
     }
 }
